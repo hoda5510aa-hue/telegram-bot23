@@ -1,7 +1,8 @@
+import os
 import sqlite3
 
 OWNER_ID = 8883976843
-DB = "users.db"
+DB = os.getenv("DB_PATH", "users.db")
 
 
 def connect():
