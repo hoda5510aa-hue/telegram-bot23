@@ -5,6 +5,10 @@ from config import OWNER_ID
 
 DB = os.getenv("DB_PATH", "users.db")
 
+db_dir = os.path.dirname(DB)
+if db_dir:
+    os.makedirs(db_dir, exist_ok=True)
+
 
 def connect():
     return sqlite3.connect(DB)
