@@ -1,7 +1,8 @@
 import os
 import sqlite3
 
-OWNER_ID = 8883976843
+from config import OWNER_ID
+
 DB = os.getenv("DB_PATH", "users.db")
 
 
